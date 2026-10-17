@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-theme="folio">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e9e5df">
+<title>AETHER | Typography Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Fraunces:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--aether-grad:linear-gradient(90deg,#4ed8ff 0%,#ff4fa3 52%,#ff8a2a 100%);--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;font-family:"Hanken Grotesk",sans-serif}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button:focus-visible,a:focus-visible{outline:2px solid #c68042;outline-offset:4px}
+html[data-theme=folio]{--bg:#eae6df;--bg2:#f3f0e9;--ink:#251f1b;--muted:#695f55;--rule:#cec4b7;--detail:#916f52;--face:"Bodoni Moda",Georgia,serif;--w:400;--headline-spacing:-.056em;--headsize:clamp(4.25rem,8.2vw,10.4rem)}
+html[data-theme=ink]{--bg:#191915;--bg2:#24231d;--ink:#eee6d5;--muted:#b8ae9d;--rule:#615b4d;--detail:#b5a17c;--face:"Cormorant Garamond",Georgia,serif;--w:400;--headline-spacing:-.046em;--headsize:clamp(4.9rem,9vw,11rem)}
+html[data-theme=architecture]{--bg:#e8e5dd;--bg2:#dcd6ca;--ink:#1a1b18;--muted:#616158;--rule:#aaa89e;--detail:#9d6439;--face:"Fraunces",Georgia,serif;--w:700;--headline-spacing:-.065em;--headsize:clamp(3.7rem,7.1vw,9.5rem)}
+body{background:var(--bg);color:var(--ink);transition:background .3s ease,color .3s ease}
+.atelier{background:#11120f;color:#dedbd3;padding:14px clamp(20px,4vw,75px);display:flex;align-items:center;justify-content:space-between;gap:26px;position:relative;z-index:50}
+.atelier__title{font:500 10px/1.4 "IBM Plex Mono",monospace;letter-spacing:.15em;white-space:nowrap;text-transform:uppercase}.atelier__title b{font-weight:500;color:#fff}.atelier__options{display:flex;gap:6px;flex-wrap:wrap}.atelier__options button{border:1px solid #4a4944;color:#c2c0ba;background:transparent;padding:10px 13px;font:400 10px "IBM Plex Mono",monospace;letter-spacing:.04em;min-height:42px;transition:background .2s,color .2s,border-color .2s}.atelier__options button[aria-pressed=true]{background:#f2f1ee;color:#131311;border-color:#f2f1ee}
+.site-header{height:96px;max-width:1760px;margin:auto;padding:0 clamp(20px,4.7vw,82px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule)}.identity{display:flex;align-items:baseline;gap:12px}.identity strong{font-family:var(--face);font-size:clamp(27px,2.8vw,40px);font-weight:500;letter-spacing:-.065em;line-height:1}.identity small{font:400 9px "IBM Plex Mono",monospace;letter-spacing:.13em;text-transform:uppercase}.site-nav{display:flex;gap:clamp(22px,3vw,48px);align-items:center}.site-nav a{font-size:13px;letter-spacing:.01em}.site-nav a:hover{text-decoration:underline;text-underline-offset:6px}
+.hero{max-width:1760px;margin:auto;display:grid;grid-template-columns:46% 54%;min-height:690px;padding:clamp(24px,3vw,56px) clamp(20px,4.7vw,82px) 50px;gap:clamp(20px,2.5vw,50px)}
+.hero__copy{display:flex;flex-direction:column;min-width:0;position:relative;padding-top:clamp(25px,4vw,82px)}.kicker{font:500 10px/1.55 "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--detail);display:flex;align-items:center;gap:18px}.kicker:before{content:"";width:38px;height:1px;background:currentColor}
+h1{font-family:var(--face);font-weight:var(--w);font-size:var(--headsize);line-height:.83;letter-spacing:var(--headline-spacing);margin:50px 0 35px;max-width:11ch}
+h1 .line{display:block}h1 em{font-weight:var(--w)}.lede{max-width:405px;font-size:clamp(15px,1.2vw,18px);line-height:1.7;color:var(--muted);margin:0 0 34px}
+.prism{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:14px 27px 16px;border:1px solid #f2f1ee;border-radius:4px;color:#06070a;background:#f2f1ee;font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;transition:transform 120ms var(--ease);align-self:flex-start}
+.prism:after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--aether-grad);transition:height 120ms var(--ease)}.prism:hover{transform:translateY(-1px)}.prism:hover:after{height:4px}.prism span:last-child{font-size:16px;transition:transform 220ms var(--ease)}.prism:hover span:last-child{transform:translateX(3px)}
+.folio-marker{font:400 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:var(--muted);margin-top:auto;padding-top:45px;display:flex;gap:20px;align-items:center}.folio-marker:after{content:"";height:1px;background:var(--rule);flex:1}
+.hero__visual{position:relative;align-self:center;min-height:550px;display:flex;align-items:center;justify-content:center;background:var(--bg2);padding:clamp(20px,3vw,60px);border:1px solid var(--rule)}.hero__visual img{width:100%;height:auto;max-height:610px;object-fit:contain}.hero__visual .plate{position:absolute;bottom:19px;left:24px;right:24px;display:flex;justify-content:space-between;color:var(--muted);font:400 9px "IBM Plex Mono",monospace;letter-spacing:.11em;text-transform:uppercase}
+.collection{max-width:1760px;margin:auto;padding:42px clamp(20px,4.7vw,82px) 100px}.collection__intro{border-top:1px solid var(--rule);padding-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;margin-bottom:36px}.collection__intro h2{font-family:var(--face);font-size:clamp(2.5rem,5.3vw,6.5rem);letter-spacing:-.05em;line-height:.9;font-weight:var(--w);margin:0}.collection__intro p{max-width:370px;justify-self:end;line-height:1.7;font-size:14px;color:var(--muted);margin:0}
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.work{min-width:0;border-top:1px solid var(--rule);padding-top:16px}.work__number{font:10px "IBM Plex Mono",monospace;letter-spacing:.12em;color:var(--detail)}.work__image{margin:18px 0;background:var(--bg2);padding:15px;aspect-ratio:4/4.2;display:flex;align-items:center;justify-content:center}.work__image img{max-height:100%;max-width:100%;object-fit:contain}.work__caption{display:flex;align-items:baseline;justify-content:space-between;gap:10px}.work h3{font:var(--w) clamp(26px,3vw,47px)/1 var(--face);letter-spacing:-.04em;margin:0}.work__caption small{color:var(--muted);font-size:11px}
+.note{max-width:1760px;margin:auto;padding:32px clamp(20px,4.7vw,82px) 42px;border-top:1px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:30px;color:var(--muted);font:11px/1.6 "IBM Plex Mono",monospace;letter-spacing:.03em}
+.note strong{color:var(--ink);font-weight:500}#theme-description{max-width:600px}
+html[data-theme=folio] .hero{grid-template-columns:44% 56%}html[data-theme=folio] h1{line-height:.84}html[data-theme=folio] h1 em{font-style:italic;font-weight:400}html[data-theme=folio] .hero__visual{background:#f5f3ef}html[data-theme=folio] .identity strong{font-weight:600}html[data-theme=folio] .hero__copy{padding-left:1.2vw}
+html[data-theme=ink] .hero{grid-template-columns:40% 60%}html[data-theme=ink] .hero__copy{justify-content:center;padding:10px 0 15px}html[data-theme=ink] .hero__visual{background:#292820;min-height:700px;border-color:#524d3e}html[data-theme=ink] h1{font-size:clamp(5.3rem,8.4vw,11rem);line-height:.76;margin:35px -55px 25px 0;position:relative;z-index:2}html[data-theme=ink] h1 em{font-style:italic;font-weight:300}html[data-theme=ink] .identity strong{font-size:40px;font-weight:300;letter-spacing:-.03em}html[data-theme=ink] .works .work{border-color:#625d51}html[data-theme=ink] .work__image{background:#292820}html[data-theme=ink] .prism{margin-bottom:15px}
+html[data-theme=architecture] .hero{grid-template-columns:52% 48%;gap:15px}html[data-theme=architecture] .hero__copy{padding-top:35px}html[data-theme=architecture] h1{line-height:.9;text-transform:uppercase;letter-spacing:-.08em;margin:48px 0 25px}html[data-theme=architecture] h1 em{font-style:normal;font-weight:400}html[data-theme=architecture] .hero__visual{border:none;min-height:620px;background:#dcd6ca}html[data-theme=architecture] .collection__intro{grid-template-columns:3fr 1fr}html[data-theme=architecture] .collection__intro h2{text-transform:uppercase;font-weight:800;line-height:.85}html[data-theme=architecture] .identity strong{text-transform:uppercase;font-family:"Hanken Grotesk",sans-serif;font-size:35px;font-weight:600;letter-spacing:-.09em}html[data-theme=architecture] .kicker{color:#5c5b54}html[data-theme=architecture] .work__number{color:#8d5539}
+@media(max-width:1050px){.atelier{align-items:flex-start;flex-direction:column;gap:12px}.hero{grid-template-columns:1fr 1fr}.hero__visual{min-height:450px}h1{font-size:clamp(4.4rem,8vw,8rem)}html[data-theme=ink] h1{font-size:clamp(4.7rem,8vw,8rem)}}
+@media(max-width:760px){.site-header{height:74px}.site-nav a:nth-child(2){display:none}.hero,html[data-theme=folio] .hero,html[data-theme=ink] .hero,html[data-theme=architecture] .hero{display:flex;flex-direction:column;gap:0;padding:0}.hero__copy,html[data-theme=ink] .hero__copy{padding:62px 23px 36px}.hero__visual,html[data-theme=ink] .hero__visual,html[data-theme=architecture] .hero__visual{min-height:300px;margin:0 15px;padding:24px 18px 43px}h1,html[data-theme=ink] h1,html[data-theme=architecture] h1{font-size:clamp(3.75rem,13.4vw,7rem);max-width:12ch;line-height:.9;margin:32px 0 25px}html[data-theme=architecture] h1{font-size:clamp(3rem,12vw,6.5rem)}.folio-marker{padding-top:45px}.hero__visual .plate{font-size:7px;bottom:14px;left:10px;right:10px}.collection{padding:74px 21px}.collection__intro,html[data-theme=architecture] .collection__intro{grid-template-columns:1fr}.collection__intro p{justify-self:start}.works{grid-template-columns:1fr;gap:42px}.work__image{max-height:500px}.work__image img{height:95%;width:auto}.work h3{font-size:37px}.note{padding:26px 21px;flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.prism,.prism:after,.prism span:last-child,body{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="atelier" aria-label="Typography concept comparison">
+<div class="atelier__title"><b>AETHER</b> / TYPOGRAPHY ATELIER &nbsp;·&nbsp; CONCEPT A RECONSTRUCTION</div>
+<div class="atelier__options" role="group" aria-label="Choose a typography direction">
+<button type="button" data-set="folio" aria-pressed="true">01 / COLLECTOR'S FOLIO</button>
+<button type="button" data-set="ink" aria-pressed="false">02 / INK & SILENCE</button>
+<button type="button" data-set="architecture" aria-pressed="false">03 / MODERN MANUSCRIPT</button>
+</div></div>
+<header class="site-header">
+<a class="identity" href="#" aria-label="Aether Gallery home"><strong>Aether</strong><small>Gallery / Vol. 01</small></a>
+<nav class="site-nav" aria-label="Gallery sections"><a href="#collection">Collection</a><a href="#notes">Curatorial notes</a></nav>
+</header>
+<main>
+<section class="hero" aria-labelledby="headline">
+<div class="hero__copy">
+<div class="kicker">Curated exhibition / No. 001</div>
+<h1 id="headline"><span class="line">The language</span><span class="line"><em>of remembrance.</em></span></h1>
+<p class="lede">Three expressions of devotion, held in calligraphic form. An invitation to look more slowly, and discover the space between image and meaning.</p>
+<a class="prism" href="#collection"><span>View the collection</span><span aria-hidden="true">→</span></a>
+<div class="folio-marker">01 &nbsp;/&nbsp; A STUDY IN FORM, LIGHT & REMEMBRANCE</div>
+</div>
+<div class="hero__visual"><img src="/artworks/triptych-study.webp" alt="Original three beige and gold Arabic calligraphy canvases in a triptych, presented without altering the image." width="1250" height="680"><div class="plate"><span>Fig. 01 / Complete ensemble</span><span>Source-faithful reproduction</span></div></div>
+</section>
+<section class="collection" id="collection">
+<div class="collection__intro"><h2>A triptych in three acts.</h2><p>Faith, craft, and surface are encountered one panel at a time. Original artwork pixels remain unchanged across all three studies.</p></div>
+<div class="works">
+<article class="work"><span class="work__number">I. / 001</span><div class="work__image"><img src="/artworks/subhan-allah-study.webp" loading="lazy" alt="Subhan Allah panel, original calligraphy crop"></div><div class="work__caption"><h3>Subhan Allah</h3><small>01 / 03</small></div></article>
+<article class="work"><span class="work__number">II. / 002</span><div class="work__image"><img src="/artworks/alhamdulillah-study.webp" loading="lazy" alt="Alhamdulillah panel, original calligraphy crop"></div><div class="work__caption"><h3>Alhamdulillah</h3><small>02 / 03</small></div></article>
+<article class="work"><span class="work__number">III. / 003</span><div class="work__image"><img src="/artworks/allahu-akbar-study.webp" loading="lazy" alt="Allahu Akbar panel, original calligraphy crop"></div><div class="work__caption"><h3>Allahu Akbar</h3><small>03 / 03</small></div></article>
+</div>
+</section>
+</main>
+<footer class="note" id="notes"><div><strong id="theme-title">01 / The Collector's Folio</strong><div id="theme-description">High-contrast Didone letterforms, delicate italics and the quiet confidence of an auction catalogue.</div></div><div>TYPOGRAPHY STUDY ONLY<br>Not a replacement for the live site</div></footer>
+<script>
+const concepts={
+folio:["01 / The Collector's Folio","High-contrast Didone letterforms, delicate italics and the quiet confidence of an auction catalogue."],
+ink:["02 / Ink & Silence","Fluid, literary serif forms, darker intimacy, warm metallic restraint and calligraphic pacing."],
+architecture:["03 / The Modern Manuscript","Monumental, deliberately unconventional headline geometry paired with quiet archival notation."]
+};
+document.querySelectorAll('[data-set]').forEach(button=>button.addEventListener('click',()=>{
+const theme=button.dataset.set;document.documentElement.dataset.theme=theme;
+document.querySelectorAll('[data-set]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+document.getElementById('theme-title').textContent=concepts[theme][0];
+document.getElementById('theme-description').textContent=concepts[theme][1];
+document.title='AETHER | '+concepts[theme][0];
+}));
+</script>
+</body></html>
