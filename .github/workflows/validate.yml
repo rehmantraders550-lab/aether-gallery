@@ -1,0 +1,31 @@
+name: AETHER gallery validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: TypeScript, artwork integrity and Vite build
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Verify original artwork and supplied assets
+        run: npm run verify:artworks
+      - name: Validate TypeScript
+        run: npm run typecheck
+      - name: Build production assets
+        run: npm run build
+      - name: Verify build output
+        run: |
+          test -f dist/index.html
+          test -s dist/artworks/CALIGRAPHY-original.webp
+          test -s dist/artworks/triptych-study.webp
